@@ -12,7 +12,7 @@ using UnityEngine;
 public class GameMaster : MonoBehaviour
 {
     public bool ballIsMoving;
-    public int playerLives = 3;
+    private int playerLives = 3;
     public float ballSpeed;
     public List<GameObject> blocks;
     public GameObject healthSpawn;
@@ -220,6 +220,7 @@ public class GameMaster : MonoBehaviour
 
         playerLives = 3;
         playerScore = 0;
+        baseLives = playerLives;
         gameOver = false;
         gameLoss = false;
         ball.resetItems();
